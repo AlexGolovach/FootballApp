@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="can_not_load_teams">Cannot load teams. Try again.</string>
+    <string name="teams">Teams</string>
+
+    <string name="can_not_load_details">Cannot load details. Try again.</string>
+    <string name="team_details">Team details</string>
+
+    <string name="team">Team: %s</string>
+    <string name="league">League: %s</string>
+    <string name="stadium">Stadium: %s</string>
+    <string name="description">Description: %s</string>
+</resources>

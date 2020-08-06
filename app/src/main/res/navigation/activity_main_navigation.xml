@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main_navigation"
+    app:startDestination="@id/nav_teams_list">
+
+    <fragment
+        android:id="@+id/nav_teams_list"
+        android:name="com.renovavision.footballapp.teams.list.TeamsListFragment"
+        android:label="Teams">
+
+        <action
+            android:id="@+id/navigate_to_team_details"
+            app:destination="@id/nav_team_details"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_team_details"
+        android:name="com.renovavision.footballapp.teams.details.TeamDetailsFragment"
+        android:label="Details">
+
+        <argument
+            android:name="team"
+            app:argType="java.io.Serializable"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/navigate_to_match_details"
+            app:destination="@id/nav_match_details"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_match_details"
+        android:name="com.renovavision.footballapp.match.MatchFragment"
+        android:label="Match">
+
+        <argument
+            android:name="event"
+            app:argType="java.io.Serializable"
+            app:nullable="true" />
+    </fragment>
+
+</navigation>
